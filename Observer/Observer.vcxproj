@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{d087a380-9da0-471f-a8d7-2ad067849366}</ProjectGuid>
+    <RootNamespace>Observer</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\Users\Sparkle\Documents\Visual Studio 2019\Templates\ProjectTemplates\Visual C++\Includes.props" />
+    <Import Project="..\..\..\..\Users\Sparkle\Documents\Visual Studio 2019\Templates\ProjectTemplates\Visual C++\lib-x64-debug.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\..\Users\Sparkle\Documents\Visual Studio 2019\Templates\ProjectTemplates\Visual C++\Includes.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Programs\vcpkg\installed\x64-windows\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Programs\vcpkg\installed\x64-windows\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <VcpkgUseStatic>false</VcpkgUseStatic>
+    <VcpkgConfiguration>Debug</VcpkgConfiguration>
+  </PropertyGroup>
+  <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <VcpkgUseStatic>false</VcpkgUseStatic>
+    <VcpkgConfiguration>Release</VcpkgConfiguration>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalUsingDirectories>C:\Programs\boost\bin.v2\libs;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <EnableModules>true</EnableModules>
+      <FloatingPointModel>Strict</FloatingPointModel>
+      <WarningVersion>
+      </WarningVersion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libssl.lib;libcrypto.lib;ws2_32.lib;crypt32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>CALL c:\Programs\git-vs-versioninfo-gen\GIT-VS-VERSION-GEN.bat --quiet "$(SolutionDir).." "$(SolutionDir)gen-versioninfo.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;_WIN32_WINNT=0x0601;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <AdditionalUsingDirectories>C:\Programs\boost\bin.v2\libs;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableModules>false</EnableModules>
+      <WarningVersion>
+      </WarningVersion>
+      <DisableSpecificWarnings>5050</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libssl.lib;libcrypto.lib;ws2_32.lib;crypt32.lib;cpprest_2_10.lib;winhttp.lib;bcrypt.lib;zlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PreBuildEvent>
+      <Command>CALL c:\Programs\git-vs-versioninfo-gen\GIT-VS-VERSION-GEN.bat --quiet "$(SolutionDir).." "$(SolutionDir)gen-versioninfo.h"</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="json\json.cpp" />
+    <ClCompile Include="json\JSONArray.cpp" />
+    <ClCompile Include="json\JSONBoolean.cpp" />
+    <ClCompile Include="json\JSONData.cpp" />
+    <ClCompile Include="json\JSONInteger.cpp" />
+    <ClCompile Include="json\JSONItem.cpp" />
+    <ClCompile Include="json\JSONLoader.cpp" />
+    <ClCompile Include="json\JSONNull.cpp" />
+    <ClCompile Include="json\JSONObject.cpp" />
+    <ClCompile Include="json\JSONString.cpp" />
+    <ClCompile Include="Logger.cpp" />
+    <ClCompile Include="markets\binance\BinanceApi.cpp" />
+    <ClCompile Include="markets\binance\BinanceOrders.cpp" />
+    <ClCompile Include="markets\binance\BinanceTrader.cpp" />
+    <ClCompile Include="markets\binance\BinanceWebsocket.cpp" />
+    <ClCompile Include="markets\binance\BookLoaderBinance.cpp" />
+    <ClCompile Include="markets\BookLoader.cpp" />
+    <ClCompile Include="markets\OrderInfo.cpp" />
+    <ClCompile Include="Observer.cpp" />
+    <ClCompile Include="PreciseNumber.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="json\json.h" />
+    <ClInclude Include="json\JSONArray.h" />
+    <ClInclude Include="json\JSONBoolean.h" />
+    <ClInclude Include="json\JSONData.h" />
+    <ClInclude Include="json\JSONInteger.h" />
+    <ClInclude Include="json\JSONItem.h" />
+    <ClInclude Include="json\JSONLoader.h" />
+    <ClInclude Include="json\JSONNull.h" />
+    <ClInclude Include="json\JSONObject.h" />
+    <ClInclude Include="json\JSONString.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="markets\binance\BinanceApi.h" />
+    <ClInclude Include="markets\binance\BinanceOrders.h" />
+    <ClInclude Include="markets\binance\BinanceTrader.h" />
+    <ClInclude Include="markets\binance\BinanceWebsocket.h" />
+    <ClInclude Include="markets\binance\BookLoaderBinance.h" />
+    <ClInclude Include="markets\BookLoader.h" />
+    <ClInclude Include="markets\OrderInfo.h" />
+    <ClInclude Include="Network.h" />
+    <ClInclude Include="PreciseNumber.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

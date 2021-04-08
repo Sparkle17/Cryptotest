@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Исходные файлы\json">
+      <UniqueIdentifier>{06ff1e81-92a1-440c-b601-872a3688ea63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\json">
+      <UniqueIdentifier>{7ebbc78a-d3ff-477f-ae72-88dfd6e1504f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\markets">
+      <UniqueIdentifier>{c6c9418d-f960-454c-8459-17764cf803ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\markets">
+      <UniqueIdentifier>{504c818b-5600-4f78-a9ec-ea397823a823}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\markets\binance">
+      <UniqueIdentifier>{a7f58b8e-5040-4172-be92-be7c59d9512a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Исходные файлы\markets\huobi">
+      <UniqueIdentifier>{91c9c46e-231f-42eb-845c-b5e300eaf606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\markets\binance">
+      <UniqueIdentifier>{0cb6549b-2042-4575-a03c-eeb77141373b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Файлы заголовков\markets\huobi">
+      <UniqueIdentifier>{9180f100-e056-4e19-bbe0-8770c9ca9ce5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Observer.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="json\JSONItem.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="Logger.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="json\json.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\JSONArray.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\JSONBoolean.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\JSONData.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\JSONInteger.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\JSONLoader.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\JSONNull.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\JSONObject.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="json\JSONString.cpp">
+      <Filter>Исходные файлы\json</Filter>
+    </ClCompile>
+    <ClCompile Include="PreciseNumber.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="markets\OrderInfo.cpp">
+      <Filter>Исходные файлы\markets</Filter>
+    </ClCompile>
+    <ClCompile Include="markets\BookLoader.cpp">
+      <Filter>Исходные файлы\markets</Filter>
+    </ClCompile>
+    <ClCompile Include="markets\binance\BinanceApi.cpp">
+      <Filter>Исходные файлы\markets\binance</Filter>
+    </ClCompile>
+    <ClCompile Include="markets\binance\BinanceOrders.cpp">
+      <Filter>Исходные файлы\markets\binance</Filter>
+    </ClCompile>
+    <ClCompile Include="markets\binance\BinanceTrader.cpp">
+      <Filter>Исходные файлы\markets\binance</Filter>
+    </ClCompile>
+    <ClCompile Include="markets\binance\BinanceWebsocket.cpp">
+      <Filter>Исходные файлы\markets\binance</Filter>
+    </ClCompile>
+    <ClCompile Include="markets\binance\BookLoaderBinance.cpp">
+      <Filter>Исходные файлы\markets\binance</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="json\JSONItem.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="Logger.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Network.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="json\json.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\JSONArray.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\JSONBoolean.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\JSONData.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\JSONInteger.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\JSONLoader.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\JSONNull.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\JSONObject.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="json\JSONString.h">
+      <Filter>Файлы заголовков\json</Filter>
+    </ClInclude>
+    <ClInclude Include="PreciseNumber.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="markets\BookLoader.h">
+      <Filter>Файлы заголовков\markets</Filter>
+    </ClInclude>
+    <ClInclude Include="markets\OrderInfo.h">
+      <Filter>Файлы заголовков\markets</Filter>
+    </ClInclude>
+    <ClInclude Include="markets\binance\BinanceApi.h">
+      <Filter>Файлы заголовков\markets\binance</Filter>
+    </ClInclude>
+    <ClInclude Include="markets\binance\BinanceOrders.h">
+      <Filter>Файлы заголовков\markets\binance</Filter>
+    </ClInclude>
+    <ClInclude Include="markets\binance\BinanceTrader.h">
+      <Filter>Файлы заголовков\markets\binance</Filter>
+    </ClInclude>
+    <ClInclude Include="markets\binance\BinanceWebsocket.h">
+      <Filter>Файлы заголовков\markets\binance</Filter>
+    </ClInclude>
+    <ClInclude Include="markets\binance\BookLoaderBinance.h">
+      <Filter>Файлы заголовков\markets\binance</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
